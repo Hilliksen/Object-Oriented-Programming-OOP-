@@ -3,7 +3,9 @@
 class Enterprise{  //# Always name your class after the name of your file in php so this is file Enteprise and class is Enterpise 
 
     //# There are three types of attributes, Private, Protected and Public
-    //! Just to be safe use private and never put attributes in public for security reasons, getters and setters are mainly public
+    //! Just to be safe use private and never put attributes in public for security reasons, getters and setters are mainly public  
+    //! WHEN TALKING ABOUT BEING SECURED ETC ITS NOT ABOUT ATTACKS ON THE INTERNET OR WHATEVER
+    //todo CHECK TERM CALLED ENCAPSULATION 
 
     //# Attributes 
     private string $raisonSociale; //# We declare the at
@@ -18,7 +20,7 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
     public function __construct(string $raisonSociale, string $dateCreation, string $adresse, string $cp, string $ville){
 
-        $this->rainsonSociale = $raisonSociale;
+        $this->raisonSociale = $raisonSociale;
         $this->dateCreation = new DateTime($dateCreation);
         $this->adresse = $adresse;
         $this->cp = $cp;
@@ -28,12 +30,12 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
 
 
-    public function getRaisonSociale(): string
+    public function getRaisonSociale(): string  //# Get as the name suggests is used to get a value that we want 
     {
         return $this->raisonSociale;
     }
     
-    public function setRaisonSociale($raisonSociale)
+    public function setRaisonSociale($raisonSociale) //# Set is used to modify or change said value 
     {
         $this->raisonSociale = $raisonSociale;
 
@@ -95,4 +97,14 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
         return $this;
     }
+
+
+    public function getAdresseComplete(){
+        return $this->adresse . " " . $this ->cp . " " . $this->ville;
+    }
+
+    public function __toString() {
+        return $this->raisonSociale. " (". $this->dateCreation->format('Y'). ")";
+    }
 }
+
