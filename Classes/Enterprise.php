@@ -7,7 +7,8 @@ class Enterprise{  //# Always name your class after the name of your file in php
     //! WHEN TALKING ABOUT BEING SECURED ETC ITS NOT ABOUT ATTACKS ON THE INTERNET OR WHATEVER
     //todo CHECK TERM CALLED ENCAPSULATION 
 
-    //# Attributes 
+    //IMPO ATTRIBUTES 
+
     private string $raisonSociale; //# We declare the at
 
     private DateTime $dateCreation; 
@@ -18,17 +19,25 @@ class Enterprise{  //# Always name your class after the name of your file in php
     
     private string $ville;
 
+    private array $employes;
+
+
+    //IMPO CONSTRUCT
+
     public function __construct(string $raisonSociale, string $dateCreation, string $adresse, string $cp, string $ville){
 
-        $this->raisonSociale = $raisonSociale;
-        $this->dateCreation = new DateTime($dateCreation);
-        $this->adresse = $adresse;
-        $this->cp = $cp;
-        $this->ville = $ville;
+        $this -> raisonSociale = $raisonSociale;
+        $this -> dateCreation = new DateTime($dateCreation);
+        $this -> adresse = $adresse;
+        $this -> cp = $cp;
+        $this -> ville = $ville;
+        $this -> employes = [];
+
     }
 
 
 
+    //IMPO GETTERS SETTERS
 
     public function getRaisonSociale(): string  //# Get as the name suggests is used to get a value that we want 
     {
@@ -103,8 +112,45 @@ class Enterprise{  //# Always name your class after the name of your file in php
         return $this->adresse . " " . $this ->cp . " " . $this->ville;
     }
 
-    public function __toString() {
-        return $this->raisonSociale. " (". $this->dateCreation->format('Y'). ")";
+    public function getEmployes()
+    {
+        return $this->employes;
     }
+
+    public function setEmployes($employes)
+    {
+        $this->employes = $employes;
+
+        return $this;
+    }
+
+
+
+    //IMPO FUNCTIONS
+
+    public function getInfos(){
+        return $this. " was created in " . $this-> getDateCreation()->format("d/m/Y"). " and the enterprise is located here: " . $this -> getAdresseComplete()."<br>";  //? I dont understand why does $this. works for raison sociale 
+    }
+
+
+    public function afficherEmployes(){
+        $result = "<h1> The employes $this </h1>";
+
+        foreach($this -> $employes as $employe){
+            $result .= "<li>" .$employe. "</li>";
+        }
+
+        return $result;
+    }
+
+
+    public function __toString() {
+        return $this->raisonSociale; 
+    }
+
+    public function addEmploye(Employe $employe){
+        $this -> employes[] = $employe;
+    }
+ 
 }
 

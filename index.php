@@ -21,20 +21,39 @@ spl_autoload_register(function($class_name) {
 
 $elanFormation = new Enterprise("ELAN FORMATION", "1993-07-01", "14 rue du Rhone", "67100", "Strasbourg"); //# Here we gave the values to our attributes, notice how we construct the values, we put them in order, code is like cooking, follow the recipe step by step in correct order and you wont burn down the kitchen
 
+$tf1 = new Enterprise("TF1","1993-07-01", "12 rue du Rhone", "75000", "Paris"); //! lets say you want Stephane to work at a new enterpise 
+
+$Stephane = new Employe("SMAIL", "Stephane", "stephane@example.com", $elanFormation);
+$Michael = new Employe("MURMANN", "Michael", "michael@example.com", $elanFormation);
+
+
+
 //* echo $elanFormation -> getRaisonSociale(). " was created in " . $elanFormation-> getDateCreation()->format("d/m/Y"). " the enterprise is located here: " . $elanFormation -> getAdresseComplete();
  //# This how u do it but theres a better way to do it, will be marked with <HERE> in Enterprise.php
 
-//  echo $elanFormation;
 
-echo $elanFormation;
+// echo $elanFormation;
+
+// echo $elanFormation->getInfos();
+
+// echo $Stephane->getInfos(); //! this is our ancient work place
+
+$Stephane->setEnterprise($tf1);
+
+// echo $Stephane->getInfos(); //! this is our new work place
 
 
 
+// var_dump($elanFormation);
+
+echo $elanFormation->afficherEmployes();
+
+
+// var_dump($Stephane); //IMPO -> ALWAYS USE VAR DUMPS 
 
 
 
-
-// $elanFormation->setRaisonSociale("Nouveau nom");   btw this is how u change the value, u use setter
+// $elanFormation->setRaisonSociale("Nouveau nom");   //# <--------btw this is how u change the value, u use setter
 // echo $elanFormation->getRaisonSociale();
 
 
