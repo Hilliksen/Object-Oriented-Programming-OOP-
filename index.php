@@ -23,16 +23,26 @@ $elanFormation = new Enterprise("ELAN FORMATION", "1993-07-01", "14 rue du Rhone
 
 $tf1 = new Enterprise("TF1","1993-07-01", "12 rue du Rhone", "75000", "Paris"); //! lets say you want Stephane to work at a new enterpise 
 
-$Stephane = new Employe("SMAIL", "Stephane", "stephane@example.com", $elanFormation);
-$Michael = new Employe("MURMANN", "Michael", "michael@example.com", $elanFormation);
+$poleEmploi = new Enterprise("Pole Emploi","1998-04-15", "50 rue du Rhone", "65240", "Nice");
 
+$Stephane = new Employe("SMAIL", "Stephane", "stephane@example.com");
+$Michael = new Employe("MURMANN", "Michael", "michael@example.com");
+
+$c1 = new Contrat($elanFormation, $Stephane, "2020-01-01");
+$c2 = new Contrat($elanFormation, $Mickael, "2021-01-01");
+$c3 = new Contrat($tf1, $Stephane, "2021-01-01");
+$c4 = new Contrat($poleEmploi, $Stephane, "2023-01-01");
+
+
+echo $elanFormation -> afficherEmployes();
 
 
 //* echo $elanFormation -> getRaisonSociale(). " was created in " . $elanFormation-> getDateCreation()->format("d/m/Y"). " the enterprise is located here: " . $elanFormation -> getAdresseComplete();
  //# This how u do it but theres a better way to do it, will be marked with <HERE> in Enterprise.php
 
 
-// echo $elanFormation;
+
+echo $elanFormation -> afficherEmployes;
 
 // echo $elanFormation->getInfos();
 
@@ -46,7 +56,7 @@ $Michael = new Employe("MURMANN", "Michael", "michael@example.com", $elanFormati
 
 // var_dump($elanFormation);
 
-echo $elanFormation->afficherEmployes();
+// echo $elanFormation->afficherEmployes();
 
 
 // var_dump($Stephane); //IMPO -> ALWAYS USE VAR DUMPS 
@@ -56,5 +66,3 @@ echo $elanFormation->afficherEmployes();
 // $elanFormation->setRaisonSociale("Nouveau nom");   //# <--------btw this is how u change the value, u use setter
 // echo $elanFormation->getRaisonSociale();
 
-
-// var_dump($elanFormation);

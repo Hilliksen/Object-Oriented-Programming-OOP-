@@ -19,7 +19,7 @@ class Enterprise{  //# Always name your class after the name of your file in php
     
     private string $ville;
 
-    private array $employes;
+    private array $contrats;
 
 
     //IMPO CONSTRUCT
@@ -31,7 +31,7 @@ class Enterprise{  //# Always name your class after the name of your file in php
         $this -> adresse = $adresse;
         $this -> cp = $cp;
         $this -> ville = $ville;
-        $this -> employes = [];
+        $this -> contrats = [];
 
     }
 
@@ -112,14 +112,15 @@ class Enterprise{  //# Always name your class after the name of your file in php
         return $this->adresse . " " . $this ->cp . " " . $this->ville;
     }
 
-    public function getEmployes()
+    
+    public function getContrats()
     {
-        return $this->employes;
+        return $this->contrats;
     }
 
-    public function setEmployes($employes)
+    public function setContrats($contrats)
     {
-        $this->employes = $employes;
+        $this->contrats = $contrats;
 
         return $this;
     }
@@ -132,28 +133,23 @@ class Enterprise{  //# Always name your class after the name of your file in php
         return $this. " was created in " . $this-> getDateCreation()->format("d/m/Y"). " and the enterprise is located here: " . $this -> getAdresseComplete()."<br>";  //? I dont understand why does $this. works for raison sociale 
     }
 
-    public function addEmploye(Employe $employe){
-        $this -> employes[] = $employe;
-    }
- 
-
-    public function afficherEmployes(){
-        $result = "<h1> The employes $this </h1>";
-
-        foreach($this -> employes as $employe){
-            $result .= "<li>".$employe. "</li>";
-        }
-
-        $result .= "</ul>";
-        return $result; 
-    }
-
-
     public function __toString() {
         return $this->raisonSociale; 
         //# equvalent to array_push($this->employes, $employe)
     }
 
- 
+    public function addContrat(Contrat $contrat){
+        $this-> contrats[] = $contrat;
+    }
+
+    public function afficherEmployes() {
+        $result = "<h2> Employes de $this </h2>";
+
+        foreach($this -> contrats as $contrat){
+            $result .= $contrat -> getEmploye(). "( ". $contrat -> getDateEmbauche(). ") "; 
+        }
+
+    }
+
 }
 

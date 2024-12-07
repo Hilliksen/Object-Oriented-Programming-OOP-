@@ -9,16 +9,17 @@ class Employe {
      
     private string $email; 
 
-    private Enterprise $enterprise;  //# Remember you are adding an object called Enterprise that you already declared in another file
+    private array $contrats;
 
 
     //IMPO CONSTRUCT
-    public function __construct(string $nom, string $prenom, string $email, Enterprise $enterprise){
+    public function __construct(string $nom, string $prenom, string $email){
         $this -> nom = $nom;
         $this -> prenom = $prenom;
         $this -> email = $email;
-        $this -> enterprise = $enterprise;
-        $this -> enterprise -> addEmploye($this);  //? not sure understood, ASK TOMORROW  ON 05/15/2024
+        // $this -> enterprise = $enterprise;
+        // $this -> enterprise -> addEmploye($this);  //? not sure understood, ASK TOMORROW  ON 05/15/2024
+        $this -> contrats = [];
 
     }
 
@@ -67,31 +68,29 @@ class Employe {
         return $this;
     }
 
-    public function getEnterprise() //?  why does this work without  : Enterprise
+        
+    public function getContrats()
     {
-        return $this->enterprise;
+        return $this->contrats;
     }
 
-
-    public function setEnterprise(Enterprise $enterprise)
+    public function setContrats($contrats)
     {
-        $this->enterprise = $enterprise;
+        $this->contrats = $contrats;
 
         return $this;
     }
- 
 
-    //IMPO FUNCTIONS
-    public function getInfos(){
-        return $this."works at ".$this->enterprise."<br>"; //# This works because we already have toString for this object in file Enterprise thus we dont have to use the getter for raisonSociale, normally if you dont have that in your previous file you wont be able to make this work and you will have an error!
-    //# to add, you cant do $this->enterprise->raisonSociale (it technically should work but) because you have the attribute raisonSociale private! you could do it with getter tho
-    //? Whats the reason for private attribute? Still dont understand 
-    
-    }
+
+ 
+    //IMPO FUNCTIONS 
+
     public function __toString(){
         return $this->prenom . " ". $this->nom;
     }
 
-
+    public function addContrats(Contrat $contrat){
+        $this-> contrats[] = $contrat;
+    }
 
 }
