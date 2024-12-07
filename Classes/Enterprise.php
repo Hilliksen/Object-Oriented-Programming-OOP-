@@ -132,25 +132,28 @@ class Enterprise{  //# Always name your class after the name of your file in php
         return $this. " was created in " . $this-> getDateCreation()->format("d/m/Y"). " and the enterprise is located here: " . $this -> getAdresseComplete()."<br>";  //? I dont understand why does $this. works for raison sociale 
     }
 
+    public function addEmploye(Employe $employe){
+        $this -> employes[] = $employe;
+    }
+ 
 
     public function afficherEmployes(){
         $result = "<h1> The employes $this </h1>";
 
-        foreach($this -> $employes as $employe){
-            $result .= "<li>" .$employe. "</li>";
+        foreach($this -> employes as $employe){
+            $result .= "<li>".$employe. "</li>";
         }
 
-        return $result;
+        $result .= "</ul>";
+        return $result; 
     }
 
 
     public function __toString() {
         return $this->raisonSociale; 
+        //# equvalent to array_push($this->employes, $employe)
     }
 
-    public function addEmploye(Employe $employe){
-        $this -> employes[] = $employe;
-    }
  
 }
 

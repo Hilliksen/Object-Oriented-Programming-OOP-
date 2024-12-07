@@ -38,7 +38,7 @@ $Michael = new Employe("MURMANN", "Michael", "michael@example.com", $elanFormati
 
 // echo $Stephane->getInfos(); //! this is our ancient work place
 
-$Stephane->setEnterprise($tf1);
+// $Stephane->setEnterprise($tf1);
 
 // echo $Stephane->getInfos(); //! this is our new work place
 
