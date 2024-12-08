@@ -89,7 +89,7 @@ class Employe {
         return $this->prenom . " ". $this->nom;
     }
 
-    public function addContrats(Contrat $contrat){
+    public function addContrat(Contrat $contrat){
         $this-> contrats[] = $contrat;
     }
 
