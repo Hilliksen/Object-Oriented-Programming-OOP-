@@ -108,11 +108,6 @@ class Enterprise{  //# Always name your class after the name of your file in php
     }
 
 
-    public function getAdresseComplete(){
-        return $this->adresse . " " . $this ->cp . " " . $this->ville;
-    }
-
-    
     public function getContrats()
     {
         return $this->contrats;
@@ -129,6 +124,10 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
     //IMPO FUNCTIONS
 
+    public function getAdresseComplete(){
+        return $this->adresse . " " . $this ->cp . " " . $this->ville;
+    }
+    
     public function getInfos(){
         return $this. " was created in " . $this-> getDateCreation()->format("d/m/Y"). " and the enterprise is located here: " . $this -> getAdresseComplete()."<br>";  //? I dont understand why does $this. works for raison sociale 
     }
