@@ -28,13 +28,23 @@ $poleEmploi = new Enterprise("Pole Emploi","1998-04-15", "50 rue du Rhone", "652
 $Stephane = new Employe("SMAIL", "Stephane", "stephane@example.com");
 $Michael = new Employe("MURMANN", "Michael", "michael@example.com");
 
-$c1 = new Contrat($elanFormation, $Stephane, "2020-05-14");
-$c2 = new Contrat($elanFormation, $Michael, "2021-11-24");
-$c3 = new Contrat($tf1, $Stephane, "2021-01-01");
-$c4 = new Contrat($poleEmploi, $Stephane, "2023-01-01");
+$c1 = new Contrat($elanFormation, $Stephane, "2020-05-14", "CDI");
+$c2 = new Contrat($elanFormation, $Michael, "2021-11-24", "CDD");
+$c3 = new Contrat($tf1, $Stephane, "2021-07-27", "Interim");
+$c4 = new Contrat($poleEmploi, $Stephane, "2024-04-13", "CDD");
+$c5 = new Contrat($poleEmploi, $Michael, "2023-09-03", "CDI");
 
 
 echo $elanFormation -> afficherEmployes();
+
+echo $tf1 -> afficherEmployes();
+
+echo $poleEmploi -> afficherEmployes();
+
+echo $Stephane -> afficherEnterprise();
+
+echo $Michael -> afficherEnterprise();
+
 
 
 //* echo $elanFormation -> getRaisonSociale(). " was created in " . $elanFormation-> getDateCreation()->format("d/m/Y"). " the enterprise is located here: " . $elanFormation -> getAdresseComplete();

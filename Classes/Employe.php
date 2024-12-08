@@ -93,4 +93,15 @@ class Employe {
         $this-> contrats[] = $contrat;
     }
 
+    public function afficherEnterprise() {
+        $result = "<h2> Enterprise de $this </h2>";
+
+        foreach($this -> contrats as $contrat){
+            $result .= $contrat -> getEnterprise(). "( ". $contrat -> getDateEmbauche(). " en ". $contrat -> getTypeContrat(). ") <br>"; 
+        }
+        
+        return $result;
+
+    }
+
 }

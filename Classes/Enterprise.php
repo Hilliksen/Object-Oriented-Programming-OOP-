@@ -145,12 +145,14 @@ class Enterprise{  //# Always name your class after the name of your file in php
         $result = "<h2> Employes de $this </h2>";
 
         foreach($this -> contrats as $contrat){
-            $result .= $contrat -> getEmploye(). "( ". $contrat -> getDateEmbauche(). ") "; 
+            $result .= $contrat -> getEmploye(). "( ". $contrat -> getDateEmbauche(). " en ". $contrat -> getTypeContrat(). ") <br>"; 
         }
         
         return $result;
 
     }
+
+
 
 }
 
