@@ -1,6 +1,6 @@
 <?php
 
-class Books{
+class Book{
     private int $pageNumber;
 
     private string $title; 
@@ -9,14 +9,17 @@ class Books{
 
     private string $dateCreation;
 
+    private Author $author; 
+
 
     //IMPO CONSTRUCT 
 
-    private function __construct(int $pageNumber, string $title, float $price, string $dateCreation) {
+    private function __construct(int $pageNumber, string $title, float $price, string $dateCreation, Author $author) {
         $this -> pageNumber = $pageNumer;
         $this -> title = $title;
         $this -> price = $price;
         $this -> dateCreation = new DateTime ($dateCreation);
+        $this -> author = $author;
     }
 
 
@@ -32,6 +35,11 @@ class Books{
 
         return $this;
     }
+
+
+
+    //* ------------------------------------------- *// 
+
     public function getTitle()
     {
         return $this->title;
@@ -43,6 +51,9 @@ class Books{
         return $this;
     }
 
+
+
+    //* ------------------------------------------- *// 
 
     public function getPrice()
     {
@@ -57,7 +68,10 @@ class Books{
         return $this;
     }
 
-  
+
+
+    //* ------------------------------------------- *// 
+
     public function getDateCreation()
     {
         return $this->dateCreation;

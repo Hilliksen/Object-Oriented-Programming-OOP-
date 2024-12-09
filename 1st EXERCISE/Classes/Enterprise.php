@@ -39,6 +39,8 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
     //IMPO GETTERS SETTERS
 
+   
+   
     public function getRaisonSociale(): string  //# Get as the name suggests is used to get a value that we want 
     {
         return $this->raisonSociale;
@@ -52,7 +54,8 @@ class Enterprise{  //# Always name your class after the name of your file in php
     }
 
 
-
+    //* ------------------------------------------- *// 
+    
     public function getDateCreation(): DateTime
     {
         return $this->dateCreation;
@@ -66,6 +69,9 @@ class Enterprise{  //# Always name your class after the name of your file in php
     }
 
   
+
+
+    //* ------------------------------------------- *//
 
     public function getAdresse(): string
     {
@@ -81,6 +87,9 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
 
 
+
+    //* ------------------------------------------- *//
+
     public function getCp(): string
     {
         return $this->cp;
@@ -95,6 +104,9 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
 
 
+
+    //* ------------------------------------------- *//
+
     public function getVille(): string
     {
         return $this->ville;
@@ -107,6 +119,10 @@ class Enterprise{  //# Always name your class after the name of your file in php
         return $this;
     }
 
+
+    
+    
+    //* ------------------------------------------- *//
 
     public function getContrats()
     {

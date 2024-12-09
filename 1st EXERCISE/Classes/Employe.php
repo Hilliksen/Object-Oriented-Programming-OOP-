@@ -28,6 +28,8 @@ class Employe {
 
 
     //IMPO GETTERS SETTERS
+
+
     public function getNom(): string
     {
         return $this->nom;
@@ -42,6 +44,9 @@ class Employe {
 
    
 
+   
+    //* ------------------------------------------- *// 
+   
     public function getPrenom(): string
     {
         return $this->prenom;
@@ -56,6 +61,9 @@ class Employe {
 
     
 
+
+    //* ------------------------------------------- *// 
+    
     public function getEmail(): string
     {
         return $this->email;
@@ -68,7 +76,11 @@ class Employe {
         return $this;
     }
 
-        
+    
+    
+    
+    //* ------------------------------------------- *//     
+    
     public function getContrats()
     {
         return $this->contrats;
