@@ -94,6 +94,10 @@ class Author{
 
     //IMPO FUNCTIONS 
 
+    public function __toString(){
+        return $this->name . " ". $this->lastName;
+    }
+
     public function addBook(Book $book){
         $this-> books[] = $book;
     }
@@ -102,11 +106,17 @@ class Author{
 
         foreach($this -> books as $book ){
              
-            $result .= $book -> getTitle(). "( made in ". $dateCreation = getDateCreation() -> format ("d/m/Y"). ") and containing " . getPageNumber(). " costs " . getPrice() ."euros <br>";
+            $result .= 
+            $book -> getTitle(). "( made in ". 
+            $book -> getDateCreation() -> format ("d/m/Y").") containing " .
+            $book -> getPageNumber(). " costs " . 
+            $book -> getPrice() ."euros <br>";
 
         }
-    }
+        
+        return $result;
 
+    }
 
    
 }

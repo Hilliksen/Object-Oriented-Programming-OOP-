@@ -46,7 +46,6 @@ class Employe {
 
    
     //* ------------------------------------------- *// 
-   
     public function getPrenom(): string
     {
         return $this->prenom;

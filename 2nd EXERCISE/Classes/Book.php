@@ -1,31 +1,34 @@
 <?php
 
 class Book{
-    private int $pageNumber;
-
     private string $title; 
+
+    private DateTime $dateCreation;
+
+    private int $pageNumber;
 
     private float $price;
 
-    private string $dateCreation;
+    private array $books;
 
-    private Author $author; 
+    // private Author $author; 
 
 
     //IMPO CONSTRUCT 
 
-    private function __construct(int $pageNumber, string $title, float $price, string $dateCreation, Author $author) {
-        $this -> pageNumber = $pageNumer;
+    public function __construct(string $title, string $dateCreation, int $pageNumber, float $price, ) {
         $this -> title = $title;
-        $this -> price = $price;
         $this -> dateCreation = new DateTime ($dateCreation);
-        $this -> author = $author;
+        $this -> pageNumber = $pageNumber;
+        $this -> price = $price;
+        $this -> books = [];
+        // $this -> author = $author;
     }
 
 
     //IMPO GETTERS AND SETTERS 
 
-    public function getPageNumber()
+    public function getPageNumber(): int
     {
         return $this->pageNumber;
     }
@@ -40,7 +43,7 @@ class Book{
 
     //* ------------------------------------------- *// 
 
-    public function getTitle()
+    public function getTitle() : string 
     {
         return $this->title;
     }
@@ -55,7 +58,7 @@ class Book{
 
     //* ------------------------------------------- *// 
 
-    public function getPrice()
+    public function getPrice() :float
     {
         return $this->price;
     }
@@ -72,7 +75,7 @@ class Book{
 
     //* ------------------------------------------- *// 
 
-    public function getDateCreation()
+    public function getDateCreation() : DateTime
     {
         return $this->dateCreation;
     }
@@ -85,5 +88,33 @@ class Book{
         return $this;
     }
 
-    
+
+
+    //* ------------------------------------------- *//
+
+    public function getBooks()
+    {
+        return $this->books;
+    }
+
+    public function setBooks($books)
+    {
+        $this->books = $books;
+
+        return $this;
+    }
+
+
+
+    //IMPO FUNCTIONS
+    public function __toString(){
+        return $this->title;
+    }
+
+     public function addBook(Book $book){
+        $this-> books[] = $book;
+    }
+
+
+
 }

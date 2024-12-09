@@ -38,9 +38,11 @@ class Contrat{
 
         return $this;
     }
- 
 
 
+
+    //* ------------------------------------------- *// 
+    
     public function getEmploye()
     {
         return $this->employe;
@@ -55,6 +57,7 @@ class Contrat{
 
   
 
+    //* ------------------------------------------- *// 
 
     public function getDateEmbauche()
     {
@@ -69,6 +72,9 @@ class Contrat{
     }
 
 
+
+    //* ------------------------------------------- *// 
+
     public function getTypeContrat()
     {
         return $this->typeContrat;
@@ -80,6 +86,11 @@ class Contrat{
 
         return $this;
     }
+
+
+
+
+    
     //IMPO FUNCTIONS 
 
 
