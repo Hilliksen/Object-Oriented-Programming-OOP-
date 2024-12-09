@@ -32,7 +32,6 @@ class Enterprise{  //# Always name your class after the name of your file in php
         $this -> cp = $cp;
         $this -> ville = $ville;
         $this -> contrats = [];
-
     }
 
 
@@ -121,7 +120,7 @@ class Enterprise{  //# Always name your class after the name of your file in php
 
 
     
-    
+
     //* ------------------------------------------- *//
 
     public function getContrats()

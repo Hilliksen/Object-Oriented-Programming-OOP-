@@ -101,6 +101,7 @@ class Author{
     public function addBook(Book $book){
         $this-> books[] = $book;
     }
+
     public function getInfos(){
         $result = $this ->name. " " . $this -> lastName . " is an american author born in " . $this -> getBirthDay() -> format("d/m/Y"). " who wrote well known books like : <br>" ;
 

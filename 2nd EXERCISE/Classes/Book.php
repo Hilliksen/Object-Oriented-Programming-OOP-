@@ -10,19 +10,21 @@ class Book{
     private float $price;
 
     private array $books;
+    
+    private Author $author;
 
     // private Author $author; 
 
 
     //IMPO CONSTRUCT 
 
-    public function __construct(string $title, string $dateCreation, int $pageNumber, float $price, ) {
+    public function __construct(string $title, string $dateCreation, int $pageNumber, float $price, Author $author) {
         $this -> title = $title;
         $this -> dateCreation = new DateTime ($dateCreation);
         $this -> pageNumber = $pageNumber;
         $this -> price = $price;
-        $this -> books = [];
-        // $this -> author = $author;
+        $this -> author = $author;
+        $this -> author -> addBook($this);
     }
 
 
@@ -104,6 +106,20 @@ class Book{
         return $this;
     }
 
+
+
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
 
 
     //IMPO FUNCTIONS

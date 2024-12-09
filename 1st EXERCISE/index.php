@@ -19,6 +19,7 @@ spl_autoload_register(function($class_name) {
     //TODO require $class_name . '.php';  THIS IS WHEN U DONT HAVE A FOLDER 
 });
 
+//# CREATING VARS 
 $elanFormation = new Enterprise("ELAN FORMATION", "1993-07-01", "14 rue du Rhone", "67100", "Strasbourg"); //# Here we gave the values to our attributes, notice how we construct the values, we put them in order, code is like cooking, follow the recipe step by step in correct order and you wont burn down the kitchen
 
 $tf1 = new Enterprise("TF1","1993-07-01", "12 rue du Rhone", "75000", "Paris"); //! lets say you want Stephane to work at a new enterpise 
@@ -26,6 +27,7 @@ $tf1 = new Enterprise("TF1","1993-07-01", "12 rue du Rhone", "75000", "Paris"); 
 $poleEmploi = new Enterprise("Pole Emploi","1998-04-15", "50 rue du Rhone", "65240", "Nice");
 
 $Stephane = new Employe("SMAIL", "Stephane", "stephane@example.com");
+
 $Michael = new Employe("MURMANN", "Michael", "michael@example.com");
 
 $c1 = new Contrat($elanFormation, $Stephane, "2020-05-14", "CDI");

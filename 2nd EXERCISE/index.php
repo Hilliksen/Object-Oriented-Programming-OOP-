@@ -12,10 +12,10 @@ spl_autoload_register(function($class_name) {
 
 $Stephen = new Author ("Stephen","King","21-09-1947","Portland USA",);
 
-$It = new Book ("IT","1986", 1138, 20);
-$Sematary = new Book ("Sematary","1983", 374, 15);
-$TheStand= new Book ("The Stand","1978", 823, 14);
-$TheShinning = new Book ("The Shinning", "1977", 447, 16);
+$It = new Book ("IT","1986", 1138, 20, $Stephen);
+$Sematary = new Book ("Sematary","1983", 374, 15, $Stephen);
+$TheStand= new Book ("The Stand","1978", 823, 14, $Stephen);
+$TheShinning = new Book ("The Shinning", "1977", 447, 16, $Stephen);
 
 
 echo $Stephen -> getInfos();
