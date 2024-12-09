@@ -6,21 +6,22 @@ class Account{
     private string $title;
     private float $ammount;
     private string $currency;
-    private string $owner;
+    private Client $client;
 
     //IMPO CONTRUCT 
 
-    public function __construct(string $title, float $ammount, string $currency, string $owner) {
+    public function __construct(string $title, float $ammount, string $currency, string $owner, Client $client) {
         $this -> title = $title;
         $this -> ammount = $ammount;
         $this -> currency = $currency;
         $this -> owner = $owner;
+        $this -> client = $client;
 
     }
 
     
     //IMPO GETTERS AND SETTERS 
-    
+
     public function getTitle()
     {
         return $this->title;

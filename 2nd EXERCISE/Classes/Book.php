@@ -9,7 +9,6 @@ class Book{
 
     private float $price;
 
-    private array $books;
     
     private Author $author;
 
