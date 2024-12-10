@@ -4,19 +4,22 @@ class Account{
 
     //IMPO ATTRIBUTES 
     private string $title;
+
     private float $ammount;
+    
     private string $currency;
+    
     private Client $client;
+    
 
     //IMPO CONTRUCT 
 
-    public function __construct(string $title, float $ammount, string $currency, string $owner, Client $client) {
+    public function __construct(string $title, float $ammount, string $currency, Client $client) {
         $this -> title = $title;
         $this -> ammount = $ammount;
         $this -> currency = $currency;
-        $this -> owner = $owner;
         $this -> client = $client;
-
+        $this -> client = addAccount($this);
     }
 
     
@@ -70,20 +73,10 @@ class Account{
     }
 
 
+    //IMPO FUNCTIONS 
+    
 
-
-    //* ------------------------------------------- *// 
-
-    public function getOwner()
-    {
-        return $this->owner;
-    }
-
-
-    public function setOwner($owner)
-    {
-        $this->owner = $owner;
-
-        return $this;
+    public function addAccount(Book $book){
+        $this-> books[] = $book;
     }
 }

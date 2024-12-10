@@ -6,17 +6,19 @@ class Client{
     private string $lastName;
     private DateTime $birthDay;
     private string $city;
-    private int $numAccount;
+    private array $accounts;
+    
     
     
     //IMPO CONTRUCT
 
-    public function __construct( string $name, string $lastName, string $birthDay, string $city, int $numAccount) {
-        $this-> name = $name;
-        $this-> lastName = $lastName;
-        $this-> birthDay= new DateTime ($birthDay);
-        $this-> city = $city;
-        $this-> numAccount = $numAccount;
+    public function __construct( string $name, string $lastName, string $birthDay, string $city) {
+        $this -> name = $name;
+        $this -> lastName = $lastName;
+        $this -> birthDay= new DateTime ($birthDay);
+        $this -> city = $city;
+        $this -> accounts = [];
+        
     }
 
 
@@ -106,4 +108,17 @@ class Client{
 
 
     //IMPO FUNCTIONS 
+    
+    public function __toString(){
+        return $this->name . " ". $this->lastName;
+    }
+
+    public function addAccount(Account $account){
+        $this-> accounts[] = $account;
+    }
+
+    public function getInfos(){
+        $result = "The "
+    }
+
 }
