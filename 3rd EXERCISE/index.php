@@ -9,8 +9,14 @@ spl_autoload_register (function ($class_name){
 
 $Joseph = new Client ("Joseph", "Smith", 43, "Washington");
 
-$saving = new Account("Savings", 9230.32, "euros", $Joseph );
-$spending = new Account("Spendings", 1257.86, "euros", $Joseph);
+$saving = new Account("Savings", 9230.32, "Euro", $Joseph );
+$spending = new Account("Spendings", 1257.86, "Euro", $Joseph);
 
 
 echo $Joseph -> getInfos();
+
+echo $saving -> getInfos();
+
+echo $saving -> transfer($spending, 230);
+
+echo $saving -> getInfos();

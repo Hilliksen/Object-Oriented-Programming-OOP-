@@ -108,15 +108,20 @@ class Client{
         return $result; 
     }
 
+
+
     public function getInfos(){
         $result = 
         "Owner: " . $this->name . " " . $this->lastName . "<br>" .
         "Age: " . $this->getAge() . "<br>" .
         "City: " . $this->getCity() . "<br>" .
-        "Accounts: " . $this -> numAccounts();
+        "Accounts: " . $this -> numAccounts() ."<br>";
 
         return $result;
     }
+
+      
+  
 
 
    

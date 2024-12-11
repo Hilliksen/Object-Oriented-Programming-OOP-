@@ -16,7 +16,7 @@ class Account{
 
     public function __construct(string $title, float $amount, string $currency, Client $client) {
         $this -> title = $title;
-        $this -> ammount = $amount;
+        $this -> amount = $amount;
         $this -> currency = $currency;
         $this -> client = $client;
         $this -> client -> addAccount($this);
@@ -43,14 +43,14 @@ class Account{
 
     //* ------------------------------------------- *// 
 
-    public function getAmmount()
+    public function getAmount()
     {
-        return $this->ammount;
+        return $this->amount;
     }
 
-    public function setAmmount($ammount)
+    public function setAmount($amount)
     {
-        $this->ammount = $ammount;
+        $this->amount = $amount;
 
         return $this;
     }
@@ -75,12 +75,36 @@ class Account{
 
     //IMPO FUNCTIONS 
 
+    
     public function __toString(){
         return $this->title;
     }
     
-
+    
     public function addAccount(Account $account){
         $this-> accounts[] = $account;
+    }
+    
+  
+    
+    public function getInfos(){
+        $result = 
+        "Accesable funds: " . $this->getAmount() . "<br>" .
+        "Currency: " . $this->getCurrency() . "<br>";
+
+        return $result;
+    }
+
+    public function transfer(Account $account , float $amount){
+        $this -> amount -= $amount;
+        $account ->deposit($amount);
+    }
+
+    public function deposit( float $amount){
+        $this -> amount += $amount;
+    }
+
+    public function withdraw( float $amount){
+        $this -> amount -= $amount;
     }
 }
