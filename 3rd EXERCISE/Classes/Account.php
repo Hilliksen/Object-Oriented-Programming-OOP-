@@ -81,9 +81,9 @@ class Account{
     }
     
     
-    public function addAccount(Account $account){
-        $this-> accounts[] = $account;
-    }
+    // public function addAccount(Account $account){
+    //     $this-> accounts[] = $account;
+    // }
     
   
     

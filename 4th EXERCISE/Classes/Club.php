@@ -12,7 +12,7 @@ class Club {
         $this -> name = $name;
         $this -> creationDate = new DateTime $creationDate;
         $this -> players = [];
-        $this -> country = $country;
+        $this -> country = addCountry($this);
     }
 
 
@@ -94,4 +94,8 @@ class Club {
     }
 
     //IMPO FUNCTIONS
+
+    public function addPlayer(Player $player){
+        $this-> players[] = $player;
+    }
 }

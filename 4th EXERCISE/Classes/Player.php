@@ -4,23 +4,25 @@ class Player {
     private string $firstName;
     private string $lastName;
     private string $position; 
-    private DateTime $birthDay;
-    private Country $country; 
+    private int $age;
+    private Club $club; 
+    private array $clubs
 
     //IMPO CONTRUCT 
 
-    public function __construct(string $firstName, string $lastName, string $position, string $birthDay, Country $country) {
+    public function __construct(string $firstName, string $lastName, string $position, int $age, Country $country) {
         $this -> firstName = $firstName;
         $this -> lastName = $lastName;
         $this -> position = $position;
-        $this -> birthDay = new DateTime $birthDay;
-        $this -> country = $country;
+        $this -> age = $age;
+        $this -> club = addClub($this);
+        $this -> clubs = []
     }
 
     
 
     //IMPO GETTERS AND SETTERS 
-    
+
     public function getFirstName()
     {
         return $this->firstName;
@@ -77,15 +79,14 @@ class Player {
 
     //* ------------------------------------------- *// 
  
-    public function getBirthDay()
+    public function getAge()
     {
-        return $this->birthDay;
+        return $this->age;
     }
 
-    
-    public function setBirthDay($birthDay)
+    public function setAge($age)
     {
-        $this->birthDay = $birthDay;
+        $this->age = $age;
 
         return $this;
     }
@@ -108,4 +109,28 @@ class Player {
 
         return $this;
     }
+
+    //IMPO CLUBS
+
+    public function __toString(){
+        return $this->firstName . " ". $this->lastName;
+    }
+
+    public function addClub(Club $club)){
+        $this-> clubs[] = $club;
+    }
+
+    public function getInfos(){
+        $result = 
+        "Name: " . $this->firstName . " " . $this->lastName . "<br>" .
+        "Age: " . $this->getAge() . "<br>" .
+        "Position: " . $this->getPosition() . "<br>" .
+        "Clubs he has played for: " . $this -> addClub() ."<br>".
+        "Origin: " . $this-> getCountry() . "<br>";
+
+        return $result;
+    }
+
+
+ 
 }
