@@ -17,6 +17,10 @@ echo $Joseph -> getInfos();
 
 echo $saving -> getInfos();
 
+echo $spending -> getInfos();
+
 echo $saving -> transfer($spending, 230);
 
 echo $saving -> getInfos();
+
+echo $spending -> getInfos();
