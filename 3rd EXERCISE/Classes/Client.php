@@ -103,7 +103,7 @@ class Client{
     }
 
     public function numAccounts(){
-        $result = count($accounts);
+        $result = count($this -> accounts);
 
         return $result; 
     }
@@ -112,7 +112,8 @@ class Client{
         $result = 
         "Owner: " . $this->name . " " . $this->lastName . "<br>" .
         "Age: " . $this->getAge() . "<br>" .
-        "City: " . $this->getCity() . "<br>";
+        "City: " . $this->getCity() . "<br>" .
+        "Accounts: " . $this -> numAccounts();
 
         return $result;
     }
