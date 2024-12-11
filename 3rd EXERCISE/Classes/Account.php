@@ -5,7 +5,7 @@ class Account{
     //IMPO ATTRIBUTES 
     private string $title;
 
-    private float $ammount;
+    private float $amount;
     
     private string $currency;
     
@@ -14,12 +14,12 @@ class Account{
 
     //IMPO CONTRUCT 
 
-    public function __construct(string $title, float $ammount, string $currency, Client $client) {
+    public function __construct(string $title, float $amount, string $currency, Client $client) {
         $this -> title = $title;
-        $this -> ammount = $ammount;
+        $this -> ammount = $amount;
         $this -> currency = $currency;
         $this -> client = $client;
-        $this -> client = addAccount($this);
+        $this -> client -> addAccount($this);
     }
 
     
@@ -74,9 +74,13 @@ class Account{
 
 
     //IMPO FUNCTIONS 
+
+    public function __toString(){
+        return $this->title;
+    }
     
 
-    public function addAccount(Book $book){
-        $this-> books[] = $book;
+    public function addAccount(Account $account){
+        $this-> accounts[] = $account;
     }
 }

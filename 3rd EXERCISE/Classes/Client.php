@@ -3,19 +3,22 @@
 class Client{
 
     private string $name;
+
     private string $lastName;
-    private DateTime $birthDay;
+    
+    private int $age;
+    
     private string $city;
+    
     private array $accounts;
-    
-    
+
     
     //IMPO CONTRUCT
 
-    public function __construct( string $name, string $lastName, string $birthDay, string $city) {
+    public function __construct( string $name, string $lastName, int $age, string $city) {
         $this -> name = $name;
         $this -> lastName = $lastName;
-        $this -> birthDay= new DateTime ($birthDay);
+        $this -> age = $age;
         $this -> city = $city;
         $this -> accounts = [];
         
@@ -58,14 +61,14 @@ class Client{
 
     //* ------------------------------------------- *// 
     
-    public function getBirthDay()
+    public function getAge()
     {
-        return $this->birthDay;
+        return $this->age;
     }
 
-    public function setBirthDay($birthDay)
+    public function setAge($age)
     {
-        $this->birthDay = $birthDay;
+        $this->age = $age;
 
         return $this;
     }
@@ -89,24 +92,6 @@ class Client{
     }
 
 
-
-
-
-    //* ------------------------------------------- *// 
-
-    public function getNumAccount()
-    {
-        return $this->numAccount;
-    }
-
-    public function setNumAccount($numAccount)
-    {
-        $this->numAccount = $numAccount;
-
-        return $this;
-    }
-
-
     //IMPO FUNCTIONS 
     
     public function __toString(){
@@ -117,8 +102,21 @@ class Client{
         $this-> accounts[] = $account;
     }
 
-    public function getInfos(){
-        $result = "The "
+    public function numAccounts(){
+        $result = count($accounts);
+
+        return $result; 
     }
 
+    public function getInfos(){
+        $result = 
+        "Owner: " . $this->name . " " . $this->lastName . "<br>" .
+        "Age: " . $this->getAge() . "<br>" .
+        "City: " . $this->getCity() . "<br>";
+
+        return $result;
+    }
+
+
+   
 }
