@@ -3,7 +3,8 @@
 class Country{
     private string $nation;
     // private Club $club; 
-    private array $clubs 
+    private array $clubs;
+    private array $players;
 
     //IMPO CONSTRUCT 
 
@@ -11,6 +12,7 @@ class Country{
         $this -> nation = $nation;
         // $this -> club = $club;
         $this -> clubs = [];
+        $this -> players = [];
     }
 
     
@@ -36,5 +38,6 @@ class Country{
     public function addClub(Club $club){
         $this-> clubs[] = $club;
     }
+    
 
 }

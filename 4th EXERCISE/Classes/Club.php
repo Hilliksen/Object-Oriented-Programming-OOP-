@@ -3,16 +3,14 @@
 class Club {
     private string $name; 
     private DateTime $creationDate;
-    private array $players;  //IMPO YOU NEED CAREER Attribute HERE
     private Country $country;
 
     //IMPO CONTRUCT 
 
-    public function __construct(string $name, string $creationDate) {
+    public function __construct(string $name, string $creationDate, Country $country) {
         $this -> name = $name;
         $this -> creationDate = new DateTime $creationDate;
-        $this -> players = [];
-        $this -> country = addCountry($this);
+        $this -> country = $country;
     }
 
 
@@ -93,9 +91,7 @@ class Club {
         return $this;
     }
 
+
     //IMPO FUNCTIONS
 
-    public function addPlayer(Player $player){
-        $this-> players[] = $player;
-    }
 }

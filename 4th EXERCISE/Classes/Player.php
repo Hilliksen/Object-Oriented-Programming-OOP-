@@ -1,12 +1,16 @@
 <?php
 
 class Player {
+
     private string $firstName;
     private string $lastName;
     private string $position; 
     private int $age;
-    private Club $club; 
-    private array $clubs
+    private Country $country;  
+    
+    //YOU NEED CARRIER ATTRIBUTE HERE
+
+   
 
     //IMPO CONTRUCT 
 
@@ -15,8 +19,8 @@ class Player {
         $this -> lastName = $lastName;
         $this -> position = $position;
         $this -> age = $age;
-        $this -> club = addClub($this);
-        $this -> clubs = []
+        $this -> country = $country;
+        $this -> country -> addPlayer($this);
     }
 
     
@@ -116,21 +120,9 @@ class Player {
         return $this->firstName . " ". $this->lastName;
     }
 
-    public function addClub(Club $club)){
-        $this-> clubs[] = $club;
+    public function addPlayer(Player $player){
+        $this-> players[] = $player;
     }
-
-    public function getInfos(){
-        $result = 
-        "Name: " . $this->firstName . " " . $this->lastName . "<br>" .
-        "Age: " . $this->getAge() . "<br>" .
-        "Position: " . $this->getPosition() . "<br>" .
-        "Clubs he has played for: " . $this -> addClub() ."<br>".
-        "Origin: " . $this-> getCountry() . "<br>";
-
-        return $result;
-    }
-
 
  
 }

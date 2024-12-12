@@ -4,6 +4,9 @@ class Contrat{
      
      //IMPO ATTRIBUTES 
 
+
+    //IMPO $THIS IS A LIKE A PLACEHOLDER FOR NAME OF $name = new Contract
+
     private Enterprise $enterprise;
 
     private Employe $employe;
