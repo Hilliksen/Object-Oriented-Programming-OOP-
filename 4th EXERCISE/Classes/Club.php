@@ -3,7 +3,7 @@
 class Club {
     private string $name; 
     private DateTime $creationDate;
-    private array $players; 
+    private array $players;  //IMPO YOU NEED CAREER Attribute HERE
     private Country $country;
 
     //IMPO CONTRUCT 
