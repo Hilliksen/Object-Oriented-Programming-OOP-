@@ -35,12 +35,37 @@ class Country{
 
     //IMPO FUNCTION 
 
-    
+
+    public function __toString(){
+        return $this->nation;
+    }
+
     public function addPlayer(Player $player){
         $this-> players[] = $player;
     }
     
     public function addClub(Club $club){
         $this-> clubs[] = $club;
+    }
+
+    public function numClubs(){
+        $result = count($this -> clubs);
+
+        return $result;
+    }
+
+    public function numPlayers(){
+        $result = count($this -> players);
+
+        return $result;
+    }
+
+    public function countryInfo(){
+        $result = 
+        "Country : ". $this -> getNation(). "<br>" . 
+        "Number of clubs : " . $this -> numClubs() . "<br>".  
+        "Number of players : ". $this -> numPlayers();
+
+        return $result;
     }
 }

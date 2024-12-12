@@ -1,5 +1,5 @@
 # OOP EXERCISES WITH ELAN FORMATION 
-Welcome whoever is viewing my profile! This repository is only for work/exercises on OOP that I've done during my course in Elan Formation (this repo will be update and modified depending of exercises give or if I have recevied some tips from my trainers! ).
+Welcome whoever is viewing my profile! This repository is only for work/exercises on OOP that I've done during my course in Elan Formation (this repo will be update and modified depending of exercises given or if I have recevied some tips from my trainers! ).
 Hope you enjoy your stay and I'm more than happy and open for any critisisms or "reviews" you may want to share. Cheers! :)
 
 ### OBJECTIVES:

@@ -22,7 +22,7 @@ class Career{
 
     //IMPO GETTERS AND SETTERS 
 
-    public function getClub()
+    public function getClub() 
     {
         return $this->club;
     }
@@ -41,7 +41,7 @@ class Career{
 
     //* ------------------------------------------- *//
    
-    public function getPlayer()
+    public function getPlayer() 
     {
         return $this->player;
     }
@@ -61,7 +61,7 @@ class Career{
 
     //* ------------------------------------------- *//
 
-    public function getYears()
+    public function getYears() : int 
     {
         return $this->years;
     }
@@ -74,6 +74,19 @@ class Career{
         return $this;
     }
 
+    
+    //IMPO FUNCTIONS 
+
+    public function lenghtCareer(){
+        $result = $this -> getYears();
+        return $result; 
+    }
+
+    public function __toString(){
+        return $this->club;
+    }
+    
+   
     
 
 }

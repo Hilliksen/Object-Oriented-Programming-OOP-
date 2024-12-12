@@ -4,7 +4,7 @@ class Club {
     private string $name; 
     private DateTime $creationDate;
     private Country $country;
-    private array $careers;
+    private array $careers;  //! ARRAY EQUALS A LOOP 
 
     //IMPO CONTRUCT 
 
@@ -77,7 +77,7 @@ class Club {
     //* ------------------------------------------- *// 
 
 
-    public function getCountry()
+    public function getCountry() 
     {
         return $this->country;
     }
@@ -94,5 +94,28 @@ class Club {
 
     public function addCareer(Career $career){
         $this -> careers[] = $career;
+    }
+
+    
+    public function clubInfo(){
+
+        $result = 
+        "Where is it located :". $this -> getCountry(). "<br>" . 
+        "When was it established : ". $this -> getCreationDate()->format("Y"). "<br>" . 
+        "Number of players : "; 
+
+        foreach ($this-> careers as $career ){
+
+            $result .= 
+
+            $career -> getClub()->getName(). 
+            $career -> getPlayer ().
+            $career -> getYears(); 
+
+        };
+
+        return $result;
+
+
     }
 }

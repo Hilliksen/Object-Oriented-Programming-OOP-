@@ -118,14 +118,13 @@ class Player {
 
     //IMPO CLUBS
 
-    public function __toString(){
-        return $this->firstName . " ". $this->lastName;
-    }
-
     public function addCareer(Career $career){
         $this -> careers[] = $career;
     }
     
+    public function __toString() {
+        return $this->firstName. " ". $this->lastName;
+    }
 
  
 }
