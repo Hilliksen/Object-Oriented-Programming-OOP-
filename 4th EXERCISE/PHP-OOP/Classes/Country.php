@@ -35,9 +35,12 @@ class Country{
 
     //IMPO FUNCTION 
 
+    
+    public function addPlayer(Player $player){
+        $this-> players[] = $player;
+    }
+    
     public function addClub(Club $club){
         $this-> clubs[] = $club;
     }
-    
-
 }

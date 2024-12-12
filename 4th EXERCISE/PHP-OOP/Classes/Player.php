@@ -7,6 +7,7 @@ class Player {
     private string $position; 
     private int $age;
     private Country $country;  
+    private array $careers = [];
     
     //YOU NEED CARRIER ATTRIBUTE HERE
 
@@ -21,6 +22,7 @@ class Player {
         $this -> age = $age;
         $this -> country = $country;
         $this -> country -> addPlayer($this);
+        $this -> career = [];
     }
 
     
@@ -120,9 +122,10 @@ class Player {
         return $this->firstName . " ". $this->lastName;
     }
 
-    public function addPlayer(Player $player){
-        $this-> players[] = $player;
+    public function addCareer(Career $career){
+        $this -> careers[] = $career;
     }
+    
 
  
 }

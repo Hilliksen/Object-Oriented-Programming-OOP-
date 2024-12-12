@@ -4,19 +4,17 @@ class Club {
     private string $name; 
     private DateTime $creationDate;
     private Country $country;
+    private array $careers;
 
     //IMPO CONTRUCT 
 
     public function __construct(string $name, string $creationDate, Country $country) {
         $this -> name = $name;
-        $this -> creationDate = new DateTime $creationDate;
+        $this -> creationDate = new DateTime ($creationDate);
         $this -> country = $country;
-    }
-
-
-
-
-    
+        $this -> country -> addClub($this);
+        $this -> careers = [];
+    }   
     //IMPO GETTERS AND SETTERS 
 
     public function getName()
@@ -94,4 +92,7 @@ class Club {
 
     //IMPO FUNCTIONS
 
+    public function addCareer(Career $career){
+        $this -> careers[] = $career;
+    }
 }
