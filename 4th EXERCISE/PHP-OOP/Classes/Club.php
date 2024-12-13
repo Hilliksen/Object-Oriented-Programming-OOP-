@@ -102,17 +102,16 @@ class Club {
         $result = 
         "Where is it located :". $this -> getCountry(). "<br>" . 
         "When was it established : ". $this -> getCreationDate()->format("Y"). "<br>" . 
-        "Number of players : "; 
+        "Number of players : ". $this -> numPlayers(); 
 
-        foreach ($this-> careers as $career ){
+        // foreach ($this-> careers as $career ){
 
-            $result .= 
+        //     $result .= 
+        //     $career -> getClub()->getName(). "<br>". 
+        //     $career -> getPlayer (). "<br>".
+        //     $career -> getYears(). "<br>"; 
 
-            $career -> getClub()->getName(). 
-            $career -> getPlayer ().
-            $career -> getYears(); 
-
-        };
+        // };
 
         return $result;
 
