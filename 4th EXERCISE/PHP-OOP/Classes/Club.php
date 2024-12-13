@@ -96,13 +96,20 @@ class Club {
         $this -> careers[] = $career;
     }
 
+    public function numPlayers(){
+        return count($this ->careers);
+    }
+    
+    
+   
     
     public function clubInfo(){
 
         $result = 
-        "Where is it located :". $this -> getCountry(). "<br>" . 
+        "<br> Where is it located : ". $this -> getCountry(). "<br>" . 
         "When was it established : ". $this -> getCreationDate()->format("Y"). "<br>" . 
         "Number of players : ". $this -> numPlayers(); 
+        "How long have they played for that club: "; 
 
         // foreach ($this-> careers as $career ){
 

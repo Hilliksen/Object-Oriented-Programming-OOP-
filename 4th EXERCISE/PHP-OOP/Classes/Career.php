@@ -86,10 +86,5 @@ class Career{
         return $this->club;
     }
     
-    public function  numPlayers(){
-        $this -> count($careers);
-    }
-   
-    
 
 }

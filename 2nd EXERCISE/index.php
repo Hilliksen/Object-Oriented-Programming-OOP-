@@ -1,6 +1,11 @@
 
 <h1>EXERCISE LIVRE</h1>
 
+<h2>EXERCISE : You have an author that has written books, display 4 of his books with the title, date of publishing, how many pages it has and how much does it cost . Good luck</h2>
+
+
+
+<h2>SOLUTION : </h2>
 <?php
 
 spl_autoload_register(function($class_name) {

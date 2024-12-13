@@ -1,5 +1,10 @@
 <h1>POO ENTERPRISE</h1>
 
+<h2>EXERCISE : We have few different employes that work for different companies, you need to show the companies name date of creation, where is it located. Later add information about the employe aswell such as last name, first name and email adress. After that you will assosiate a company to employe (can have multiple) and an employe to company (can have multiple). Lastly add to each object the duration of the contract with said object and display it. Good luck</h2>
+
+
+
+<h2>SOLUTION : </h2>
 
 <?php
 
