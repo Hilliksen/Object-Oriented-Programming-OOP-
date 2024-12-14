@@ -1,6 +1,7 @@
 # OOP EXERCISES WITH ELAN FORMATION
 
-Welcome whoever is viewing my profile! This repository is only for work/exercises on OOP that I've done during my course in Elan Formation (this repo will be update and modified depending of exercises given or if I have recevied some tips from my trainers! ). Hope you enjoy your stay and I'm more than happy and open for any critisisms or "reviews" you may want to share. Cheers! :)
+Welcome whoever is viewing my profile! The purpose of these exercises (and this repository as a whole) is to learn and understand the OOP with the help of tutors or trainers that im working with in Elan Formation. If you would like to keep up with my progress and or just checking up on my skills remember that for every commit I will right a lengthy message explain what I did, so remember to hover over it or just click 3 little dots. Hope you have a great day!
+
 ### OBJECTIVES:
   - Learn and understand OOP.
   - Do the exercises give with attention and care.
@@ -17,9 +18,10 @@ Welcome whoever is viewing my profile! This repository is only for work/exercise
  -Laragon
 
 ### THOUGHTS
-All in all I think the PHP and backend in general is not my strongest suit but just like mathematics I find it a lot of fun if I understand whats going on, why is it working and how is it doing. Overall I think the exercises are going great and I feel like theres a lot of progress going on so i just need to keep my head down focus and annoy trainers with lots of questions about the details.
+In all honesty I believe that the backend is not my strongest fort but it's bringing me a lot of joy and it allows me to develop not only my logical skills but also improve my attention to detail. I'm making good progress that I feel is very transparent in the way I think and they way I code, as it (OOP) is very important skill that is needed to have if I want to call myself a developer. All in all great language improving my skills.
 
 
 
 ### UPDATES:
  - 13/12/2024: Moved the README file from 1ST EXERCISE folder to the OOP folder.
+ - 14/12/2024: Small Changes to the readme file following the input of my tutors.  
