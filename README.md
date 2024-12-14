@@ -1,12 +1,16 @@
 # OOP EXERCISES WITH ELAN FORMATION
 
-Welcome whoever is viewing my profile! The purpose of these exercises (and this repository as a whole) is to learn and understand the OOP with the help of tutors or trainers that im working with in Elan Formation. If you would like to keep up with my progress and or just checking up on my skills remember that for every commit I will right a lengthy message explain what I did, so remember to hover over it or just click 3 little dots. Hope you have a great day!
+Welcome whoever is viewing my profile! The purpose of these exercises (and this repository as a whole) is a project for training done by Elan Formation to be on par with a person with BAC+2 (meaning the higher national diploma or in second year of university) in programming. Thus the aim here is to learn and understand the OOP with the help of tutors or trainers that im working with in Elan Formation. If you would like to keep up with my progress and or just checking up on my skills remember that for every commit I will right a lengthy message explain what I did, so remember to hover over it or just click 3 little dots. Hope you have a great day!
 
 ### OBJECTIVES:
   - Learn and understand OOP.
   - Do the exercises give with attention and care.
   - Make notes/remarks.
-  - Have fun with programming!
+  - Understand the principals like :
+      - Class creation
+      - Encapsulation
+      - Making a custom methods
+  
 
 ### WHAT DID I USE?
 
