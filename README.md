@@ -9,7 +9,7 @@ Welcome whoever is viewing my profile! The purpose of these exercises (and this 
   - Understand the principals like :
       - Class creation
       - Encapsulation
-      - Making a custom methods
+      - Making a custom method
   
 
 ### WHAT DID I USE?
