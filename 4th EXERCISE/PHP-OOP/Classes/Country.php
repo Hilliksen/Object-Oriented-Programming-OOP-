@@ -72,7 +72,16 @@ class Country{
         "<p>".
             $result .= 
             $club -> getName(). 
-            $club -> getCreationDate() -> format ("Y").
+            $club -> getCreationDate() -> format ("Y"). "<br>". "<br>". "<br>".
+
+        "</p>";
+        }
+        foreach ($this -> players as $player) {
+        "<p class = 'player'>".
+            $result .= 
+            $player -> getFirstName().", ". 
+            $player -> getAge(). ", ".
+            $player -> getPosition(). "<br>";   
 
         "</p>";
 
