@@ -67,7 +67,9 @@ class Country{
         // "Number of players : ". $this -> numPlayers();
 
         $result = 
-        "<h2> ". $this -> getNation(). "</h2>";
+        "<h1> ". $this -> getNation(). "</h1>" ;
+
+        $result .= "<h3>The clubs : </h3>";
         foreach($this -> clubs as $club ){
         "<p>".
             $result .= 
@@ -76,6 +78,8 @@ class Country{
 
         "</p>";
         }
+        
+        $result .= "<h3> The players:  </h3>";
         foreach ($this -> players as $player) {
         "<p class = 'player'>".
             $result .= 
