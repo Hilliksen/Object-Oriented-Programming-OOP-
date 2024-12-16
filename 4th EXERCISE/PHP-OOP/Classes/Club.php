@@ -17,13 +17,13 @@ class Club {
     }   
     //IMPO GETTERS AND SETTERS 
 
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
    
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
 
@@ -36,13 +36,13 @@ class Club {
 
     //* ------------------------------------------- *// 
  
-    public function getCreationDate()
+    public function getCreationDate() : int
     {
         return $this->creationDate;
     }
 
    
-    public function setCreationDate($creationDate)
+    public function setCreationDate(int $creationDate)
     {
         $this->creationDate = $creationDate;
 
@@ -53,36 +53,16 @@ class Club {
 
 
 
-    //* ------------------------------------------- *// 
-
-    public function getPlayers()
-    {
-        return $this->players;
-    }
-
-   
-    
-
-    public function setPlayers($players)
-    {
-        $this->players = $players;
-
-        return $this;
-    }
-
-
-
-
 
     //* ------------------------------------------- *// 
 
 
-    public function getCountry() 
+    public function getCountry() : Country 
     {
         return $this->country;
     }
 
-    public function setCountry($country)
+    public function setCountry( Country $country)
     {
         $this->country = $country;
 
@@ -105,12 +85,14 @@ class Club {
     public function clubInfo(){
 
         $result = 
-        "<h1> ". $this -> getName(). "</h1>";
+        "<h1> ". $this -> getName(). "</h1>". 
+        "<h2> " . $this ->getCountry(). "</h2>". "<br>" ."<br>";
 
         foreach($this -> careers as $career ){
             $result .= 
-            $career -> getPlayer(). "&nbsp;". 
-            $career -> getYears(). "<br>";
+            $career -> getPlayer(). " - played for ". 
+            $career -> getYears(). " years<br>" . 
+            " since ". $career -> getEnter() -> format("Y"). "<br>";
         }
 
         return $result;

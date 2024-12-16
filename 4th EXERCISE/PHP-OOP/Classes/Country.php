@@ -2,15 +2,14 @@
 
 class Country{
     private string $nation;
-    // private Club $club; 
+
     private array $clubs;
     private array $players;
 
     //IMPO CONSTRUCT 
 
-    public function __construct(string $nation, /*Club $club*/ ) {
+    public function __construct(string $nation) {
         $this -> nation = $nation;
-        // $this -> club = $club;
         $this -> clubs = [];
         $this -> players = [];
     }
@@ -20,12 +19,12 @@ class Country{
 
     // IMPO GETTERS AND SETTERS 
 
-    public function getNation()
+    public function getNation(): string
     {
         return $this->nation;
     }
  
-    public function setNation($nation)
+    public function setNation(string $nation)
     {
         $this->nation = $nation;
 
@@ -40,13 +39,19 @@ class Country{
         return $this->nation;
     }
 
+
+
     public function addPlayer(Player $player){
         $this-> players[] = $player;
     }
+
+
     
     public function addClub(Club $club){
         $this-> clubs[] = $club;
     }
+
+
 
     public function numClubs(){
         $result = count($this -> clubs);
@@ -54,11 +59,16 @@ class Country{
         return $result;
     }
 
+
+
     public function numPlayers(){
         $result = count($this -> players);
 
         return $result;
     }
+
+
+    
 
     public function countryInfo(){
         $result = 
@@ -67,19 +77,9 @@ class Country{
         $result .= "<h3>The clubs : </h3>";
         foreach($this -> clubs as $club ){
             $result .= 
-            $club -> getName(). 
+            $club -> getName(). " - ".
             $club -> getCreationDate(). "<br>". "<br>". "<br>";
         }
-        
-        $result .= "<h3> The players:  </h3>";
-        foreach ($this -> players as $player) {
-            $result .= 
-            $player -> getFirstName().", ". 
-            $player -> getAge(). ", ".
-            $player -> getPosition(). "<br>";   
-        }
-
-
 
         return $result;
     }

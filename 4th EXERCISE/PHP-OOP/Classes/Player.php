@@ -9,7 +9,6 @@ class Player {
     private Country $country;  
     private array $careers = [];
     
-    //YOU NEED CARRIER ATTRIBUTE HERE
 
    
 
@@ -29,12 +28,12 @@ class Player {
 
     //IMPO GETTERS AND SETTERS 
 
-    public function getFirstName()
+    public function getFirstName() : string 
     {
         return $this->firstName;
     }
  
-    public function setFirstName($firstName)
+    public function setFirstName(string $firstName)
     {
         $this->firstName = $firstName;
 
@@ -47,13 +46,13 @@ class Player {
 
     //* ------------------------------------------- *// 
 
-    public function getLastName()
+    public function getLastName(): string 
     {
         return $this->lastName;
     }
 
     
-    public function setLastName($lastName)
+    public function setLastName(string $lastName)
     {
         $this->lastName = $lastName;
 
@@ -66,13 +65,13 @@ class Player {
     
     //* ------------------------------------------- *// 
     
-    public function getPosition()
+    public function getPosition(): string 
     {
         return $this->position;
     }
 
  
-    public function setPosition($position)
+    public function setPosition(string $position)
     {
         $this->position = $position;
 
@@ -85,12 +84,12 @@ class Player {
 
     //* ------------------------------------------- *// 
  
-    public function getAge()
+    public function getAge():int 
     {
         return $this->age;
     }
 
-    public function setAge($age)
+    public function setAge(int $age)
     {
         $this->age = $age;
 
@@ -103,13 +102,13 @@ class Player {
 
     //* ------------------------------------------- *// 
  
-    public function getCountry()
+    public function getCountry(): Country
     {
         return $this->country;
     }
 
    
-    public function setCountry($country)
+    public function setCountry(Country $country)
     {
         $this->country = $country;
 
@@ -127,7 +126,9 @@ class Player {
     }
 
     public function playerInfo(){
-        $result = "<h1>" . $this->firstName. " ". $this->lastName . "</h1>";
+        $result = "<h1>" . $this . " - " . $this -> getAge(). "</h1> ".
+        "<h2> " . $this ->getCountry(). "</h2>" . "<br>" ."<br>";
+        
 
         foreach($this -> careers as $career ){
             $result .= 

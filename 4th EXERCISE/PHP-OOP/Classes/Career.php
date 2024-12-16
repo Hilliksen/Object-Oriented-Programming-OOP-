@@ -25,13 +25,13 @@ class Career{
 
     //IMPO GETTERS AND SETTERS 
 
-    public function getClub() 
+    public function getClub(): Club  
     {
         return $this->club;
     }
 
    
-    public function setClub($club)
+    public function setClub( Club $club)
     {
         $this->club = $club;
 
@@ -44,14 +44,14 @@ class Career{
 
     //* ------------------------------------------- *//
    
-    public function getPlayer() 
+    public function getPlayer() :  Player 
     {
         return $this->player;
     }
 
 
     
-    public function setPlayer($player)
+    public function setPlayer( Player $player)
     {
         $this->player = $player;
 
@@ -70,7 +70,7 @@ class Career{
     }
 
     
-    public function setYears($years)
+    public function setYears(int $years)
     {
         $this->years = $years;
 
@@ -84,12 +84,12 @@ class Career{
 
     //* ------------------------------------------- *//
 
-    public function getEnter()
+    public function getEnter() : DateTime
     {
         return $this->enter;
     }
 
-    public function setEnter($enter)
+    public function setEnter(DateTime $enter)
     {
         $this->enter = $enter;
 
@@ -108,12 +108,5 @@ class Career{
     public function __toString(){
         return $this->club;
     }
-
-    // public function when(){
-    //     return $this -> enter;
-    // }
-    
-
-
   
 }

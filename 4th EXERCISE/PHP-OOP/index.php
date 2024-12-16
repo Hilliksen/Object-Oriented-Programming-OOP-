@@ -5,12 +5,17 @@ spl_autoload_register(function($class_name){
     require 'classes/' . $class_name . '.php';
 });
 
+
 //! COUNTRIES 
 
 $england = new Country ("England");
 $germany= new Country ("Germany");
 $spain = new Country ("Spain");
 $france = new Country ("France");
+
+
+
+
 
 
 
@@ -23,17 +28,29 @@ $liverpool= new Club ("Liverpool ", 1892, $england );
 
 
 
+
+
+
+
 //! FRANCE CLUBS 
 
 $psg = new Club ("Paris Saint-Germain ", 1970, $france );
 $lyon = new Club ("Olympique Lyonnais ", 1950, $france);
 $strasbourg = new Club ("Racing Strasbourg ", 1906, $france );
 
+
+
+
+
 //!GERMANY CLUBS 
 
 $bayern = new Club ("FC Bayern Munchen ", 1900, $germany);
 $vfb = new Club ("VFB Stuttgart ", 1893, $germany);
 $borussia = new Club ("Borussia Dortmund ", 1909, $germany);
+
+
+
+
 //! SPAIN CLUBS 
 
 $realmadrid = new Club ("Real Madrid ", 1878, $spain );
@@ -42,6 +59,8 @@ $valencia= new Club ("Valencia ", 1892, $spain );
 
 
 $clubs = [$manchester, $manchesterCity, $liverpool, $psg, $lyon, $strasbourg, $bayern, $vfb, $borussia, $barcelona, $realmadrid, $valencia,];
+
+
 
 
 //! PLAYERS 
@@ -75,6 +94,10 @@ $players = [$rooney, $ronaldo, $pogba, $virgin, $robert, $zidane, $benzema, $kan
 
 
 
+
+
+
+//! CAREERS 
 $c1 = new Career ($manchester, $rooney, 13 , "2004-01-01");
 $c2 = new Career ($manchester, $ronaldo, 5 , "2007-01-01");
 $c3 = new Career ($manchester, $pogba, 3 , "2003-01-01");
@@ -108,6 +131,10 @@ $c25 = new Career ($borussia, $robert, 7 , "20021-01-01");
 
 ?>
 
+<!------------------------------------------------------------------ HTML------------------------------------------------------------------------->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,6 +162,9 @@ $c25 = new Career ($borussia, $robert, 7 , "20021-01-01");
         </div>
 
 
+
+        
+    <h1>CLUBS</h1>
         <div class="container">
 
 
@@ -149,6 +179,8 @@ $c25 = new Career ($borussia, $robert, 7 , "20021-01-01");
 
 
 
+
+    <h1>PLAYERS</h1>
         <div class="container">
 
             <?php 
@@ -159,9 +191,6 @@ $c25 = new Career ($borussia, $robert, 7 , "20021-01-01");
                     </div>
                 <?php } ?>
         </div>
-
-
-
 
 </body>
 </html>
