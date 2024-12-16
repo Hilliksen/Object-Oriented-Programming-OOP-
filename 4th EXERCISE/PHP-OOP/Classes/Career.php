@@ -10,12 +10,15 @@ class Career{
 
     private int $years;
     
+    private DateTime $enter;
+    
     
     //IMPO CONSTRUCT 
-    public function __construct(Club $club, Player $player, int $years) {
+    public function __construct(Club $club, Player $player, int $years, string $enter) {
         $this -> club = $club;
         $this -> player = $player;
         $this -> years = $years;
+        $this -> enter = new DateTime ($enter);
         $this -> club -> addCareer($this);
         $this -> player -> addCareer($this);
     }
@@ -74,7 +77,27 @@ class Career{
         return $this;
     }
 
+
+
+
+
+
+    //* ------------------------------------------- *//
+
+    public function getEnter()
+    {
+        return $this->enter;
+    }
+
+    public function setEnter($enter)
+    {
+        $this->enter = $enter;
+
+        return $this;
+    }
+
     
+
     //IMPO FUNCTIONS 
 
     public function lenghtCareer(){
@@ -85,6 +108,12 @@ class Career{
     public function __toString(){
         return $this->club;
     }
+
+    // public function when(){
+    //     return $this -> enter;
+    // }
     
 
+
+  
 }

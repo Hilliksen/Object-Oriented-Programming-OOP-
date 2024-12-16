@@ -61,35 +61,24 @@ class Country{
     }
 
     public function countryInfo(){
-        // $result = 
-        // "Country : ". $this -> getNation(). "<br>" . 
-        // "Number of clubs : " . $this -> numClubs() . "<br>".  
-        // "Number of players : ". $this -> numPlayers();
-
         $result = 
         "<h1> ". $this -> getNation(). "</h1>" ;
 
         $result .= "<h3>The clubs : </h3>";
         foreach($this -> clubs as $club ){
-        "<p>".
             $result .= 
             $club -> getName(). 
-            $club -> getCreationDate() -> format ("Y"). "<br>". "<br>". "<br>".
-
-        "</p>";
+            $club -> getCreationDate(). "<br>". "<br>". "<br>";
         }
         
         $result .= "<h3> The players:  </h3>";
         foreach ($this -> players as $player) {
-        "<p class = 'player'>".
             $result .= 
             $player -> getFirstName().", ". 
             $player -> getAge(). ", ".
             $player -> getPosition(). "<br>";   
-
-        "</p>";
-
         }
+
 
 
         return $result;

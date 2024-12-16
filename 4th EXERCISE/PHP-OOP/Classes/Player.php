@@ -126,5 +126,18 @@ class Player {
         return $this->firstName. " ". $this->lastName;
     }
 
+    public function playerInfo(){
+        $result = "<h1>" . $this->firstName. " ". $this->lastName . "</h1>";
+
+        foreach($this -> careers as $career ){
+            $result .= 
+            $career -> getClub(). "for ".
+            $career -> getYears(). " years <br>"
+            ." In ".
+            $career -> getEnter() -> format("d/m/Y"). "<br>";
+        }
+
+        return $result;
+    }
  
 }
